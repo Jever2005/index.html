@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Log-in</title>
+</head>
+<style type="text/css">
+
+	body{
+		background-color: #0078A8;
+	}
+	
+	.login{
+		border: 1px solid black;
+		width: 400px;
+		height: 370px;
+		background-color: rgba(0, 0, 0, 0.4);
+		color: white;
+		border-radius: 20px;
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+		background-size: cover;
+		background-position: center;
+		overflow: hidden;
+		margin-top: 150px;
+	}
+
+	.form{
+		display: block;
+		box-sizing: border-box;
+		padding: 40px;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: brightness(40%);
+		flex-direction: column;
+		display: flex;
+		gap: 5px;
+	}
+
+	h1{
+		font-weight: normal;
+		font-size: 24px;
+		text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+		margin-bottom: 60px;
+	}
+
+	label{
+		color: whitesmoke;
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 2px;
+		padding-left: 10px;
+	}
+
+	input{
+		background: rgba(255, 255, 255, 0.3);
+		height: 40px;
+		line-height: 40px;
+		border-radius: 20px;
+		padding: 0px 20px;
+		border: none;
+		margin-bottom: 20px;
+		color: white;
+	}
+
+	#sub{
+		background-color: blue;
+		width: 305px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 40px;
+		border: none;
+		margin-top: 20px;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+		color: white;
+		font-size: 12px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: white;
+		background-color: blue;
+		padding: 10px;
+		border-radius: 20px;
+	}
+	#sub:hover{
+		background-color: darkblue;
+		cursor: pointer;
+	}
+
+	.forget{
+		margin-top: -10em;
+	}
+
+	.forget p{
+		display: flex;
+		align-items: center;
+		margin-left: 44.4em;
+		color: white;
+		margin-top: 2em;
+	}
+
+	#r{
+		margin-top: 20px;
+	}
+	a{
+		color: deepblue;
+	}
+	a:hover{
+		color: red;
+	}
+	#sub{
+		
+	}
+</style>
+<body>
+	<center>
+     <div class="login">
+       <form>
+     	<h1>LOG IN</h1>
+     	<label>Username</label>
+     	<input type="email" required id="u">
+     	<label>Password</label>
+     	<input type="Password" required id="p"><br>
+     	<a href="finaldash.html" id="sub">Submit</a>
+       </form>
+     </div>
+     <div class="forget">
+				<p><input type="checkbox" id="r">Remember</p>
+				<a href="#">Forgot Password</a>
+		 </div>
+    </center>
+</body>
+</html>

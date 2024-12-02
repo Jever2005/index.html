@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: "Arial";
+            background-color: #0078A8;
+            margin: 0;
+            color: white;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #005d7f;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .user-profile a{
+            text-decoration: none;
+            color: white;
+            margin-right: 50px;
+        }
+        
+
+        .header img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .header .search-bar {
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .header .search-bar input {
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+       
+
+        .header .search-bar img {
+            width: 20px;
+            margin-right: 5px;
+        }
+
+        .header .user-profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .user-profile img {
+            width: 40px;
+            border-radius: 50px;
+            margin-left: 10px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: #005d7f;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(225, 225, 225, 0.3);
+        }
+        .box4{
+            background-color: #005d7f;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(225, 225, 225, 0.3);
+        }
+        .box3{
+            background-color: #005d7f;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(225, 225, 225, 0.3);
+        }
+        .box5{
+            height: 200px;
+            box-shadow: 0 0 10px rgba(225, 225, 225, 0.3);
+        }
+        .box li{
+            padding: 10px;
+        }
+        .box ul{
+            padding: 10px;
+        }
+
+        .chart {
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            padding: 20px;
+            height: 260px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .chart h3{
+            margin-top: -200px;
+        }
+
+        .map {
+            background-size: cover;
+            border-radius: 10px;
+            height: 250px;
+            position: relative;
+        }
+        .map img{
+            border-radius: 10px;
+            height: 250px;
+            width: 730px;
+        }
+
+        .map-line {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background-color: #00ff00;
+            top: 50%;
+            left: 50%;
+        }
+
+        .footer {
+            background-color: #005d7f;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        #m{
+            height: 50px;
+            width: 150px;
+            margin-top: -7px;
+        }
+        #r{
+           margin-top: 15px;
+           margin-left: -65px;
+        }
+
+        .logo{
+            display: flex;
+
+        }
+
+        .clock{
+            font-size: 60px;
+            padding: 20px;
+            background-color: #005d7f;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(225, 225, 225, 0.3);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="ml.png" id="m">
+            <span id="r">RescueNet</span>
+        </div>
+        <div class="search-bar">
+            <img src="sicon.png">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="user-profile">
+            <a href="index.html">Home</a>
+            <span>Jever Lico</span>
+            <img src="P.jpg">
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="box">
+            <h3>Incidents</h3>
+            <p>1st Year: 10%</p>
+            <p>2nd Year: 7%</p>
+            <p>3rd Year: 3%</p>
+        </div>
+        <div class="chart">
+            <h3>Incident Statistics</h3>
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        </div>
+        <div class="box">
+            <h3>Disaster Types:</h3>
+            <ul>
+                <li>Earthquake</li>
+                <li>Flood</li>
+                <li>Tsunami</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>User Management</h3>
+            <img src="team.png" style="width: 100px; height: 100px;">
+        </div>
+        <div class="map">
+            <a href="https://zoom.earth/places/philippines/"><img src="ph.png"></a>
+            <!-- Add a line representation -->
+            
+        </div>
+        <div class="box">
+            <h3>Donations</h3>
+            <img src="don.png" style="width: 100px; height: 100px;">
+        </div>
+        <div class="box3">
+            <h3>Collaboration Tools</h3>
+            <img src="collaboration.png" style="width: 100px; height: 100px;">
+        </div>
+        <div class="box4">
+            <h3>Resources Management</h3>
+            <img src="res.png" style="width: 100px; height: 100px;">
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div>
+             <a href="#" class="fa fa-google"></a>
+            <a href="mailto:2089201@g.cu.edu.ph">2089201@g.cu.edu.ph</a>
+        </div>
+        <div>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script>
+var xValues = ['1st Year', '2nd Year', '3rd Year'];
+var yValues = [10, 7, 3];
+var barColors = [
+  '#4caf50', '#ff9800', '#f44336'
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      title: "Incident Statistics"
+    }
+  }
+});
+</script>
+
+
+    
+</body>
+</html>
